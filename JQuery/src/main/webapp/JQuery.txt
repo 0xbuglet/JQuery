@@ -1,0 +1,9 @@
+JQuery.txt
+
+- jquery.com
+- js library = jquery
+- <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+제이쿼리(JQuery) : 자바 스크립트를 사용해서 만든 라이브러리
+				(자바 스크립트의 기능(함수)을 모아 놓은 것)
+				
