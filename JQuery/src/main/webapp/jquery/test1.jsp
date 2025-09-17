@@ -17,7 +17,7 @@
 <script type="text/javascript">
 	// $(document).ready() 호출 필수
 	$(document).ready(function(){
-		// 문서가 준비 완료 된다 == bodt 태그 로딩 완료
+		// 문서가 준비 완료 된다 == body 태그 로딩 완료
 		alert(" 2. jquery 실행 ! ")
 	});
 	
