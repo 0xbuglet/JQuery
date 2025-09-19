@@ -24,7 +24,7 @@
 		// 테이블 요소의 배경색 색칠
 		$("tr:first").css("background", "yellow");
 		$("tr:last").css("background", "yellow");
-		$("tr:odd").css("background", "yellow");
+		$("tr:odd").css("background", "pink");
 		$("tr:even").css("background", "yellow");
 		// 행을 구분하는 인덱스는 항상 0부터 시작
 	});
