@@ -66,8 +66,47 @@
 	<%=request.getParameter("id") %>, 
 	<%=request.getParameter("pass") %>
 	
+	<hr>
+	
+	<div id="divXML">
+		<h2>(eXtensible Markup Language)</h2>
+		<p>HTML처럼 생겼다(태그로 구성), 데이터를 저장</p>
+		
+		<input type="button" value="xml 정보 가져오기" id="btnXML">
+		
+	</div>
+	
 	<script type="text/javascript">
-
+		// btnXML 버튼 클릭시 비동기 방식으로 test9-3.jsp 페이지에서
+		// XML 데이터를 가져와서 출력
+		$("#btnXML").click(function(){
+			$.ajax({
+				url : "test9-3.jsp",
+				success : function(data){
+					alert("xml 페이지 다녀옴");
+					//$("#divXML").append(data);
+					//console.log(data);
+					
+					// 전체 데이터를 모두 감싸는 태그에 접근
+					$(data).find("person").each(function(){
+						var name = $(this).find("name").text();
+						var age = $(this).find("age").text();
+						var gender = $(this).find("gender").text();
+						
+						$("#divXML").append(name+"/"+age+"/"+gender+"<hr>");
+					});
+				}
+			});
+			
+			// AJAX CORS (동일한 도메인 주소에 대한 접근 해야한다는 정책)
+			
+			$.ajax({
+				url : "https://news-ex.jtbc.co.kr/v1/get/rss/section/sports",
+				success : function() {
+					alert("jtbc rss 다녀옴");
+				}
+			})
+		});
 	</script>
 </body>
 </html>
