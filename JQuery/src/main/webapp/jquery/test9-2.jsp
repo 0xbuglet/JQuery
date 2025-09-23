@@ -46,7 +46,11 @@
 	%>
 	<h2>아이디 : <%=request.getParameter("id") %></h2>
 	<h2>비밀번호 : <%=request.getParameter("pass") %></h2>
+	
+	<%= %>
+	
 	<script type="text/javascript">
+
 	
 		
 	</script>
