@@ -101,12 +101,29 @@
 			// AJAX CORS (동일한 도메인 주소에 대한 접근 해야한다는 정책)
 			
 			$.ajax({
-				url : "https://news-ex.jtbc.co.kr/v1/get/rss/section/sports",
+				
+				// "https://news-ex.jtbc.co.kr/v1/get/rss/section/sports"
+				url : "jtbc.xml",
 				success : function() {
 					alert("jtbc rss 다녀옴");
+					
+					$(data).find("item").each(function(){
+							var title = $(this).find("title").text();
+							var link = $(this).find("link").text();
+							
+							// $("#newsDiv").append(title + "<br>");
+							// $("#newsDiv").append(link + "<br>");
+							$("#newsDiv").append("<a hred='"+link+"'>"+title+"</a>");
+					});
 				}
 			})
 		});
 	</script>
+	
+	<div id="newDiv">
+		<h1>JTBC 뉴스 정보 (제목, 링크)</h1>
+		
+	
+	</div>
 </body>
 </html>
